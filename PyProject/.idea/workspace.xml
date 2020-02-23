@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb79d9c9-2856-475d-830a-61d30dec62c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PyProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,22 +93,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="287" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291792439" />
-    <state width="1899" height="266" key="GridCell.Tab.0.bottom" timestamp="1581291935806">
+    <state width="1914" height="271" key="GridCell.Tab.0.bottom" timestamp="1582474133824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291935806" />
-    <state width="1899" height="266" key="GridCell.Tab.0.center" timestamp="1581291935806">
+    <state width="1914" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582474133824" />
+    <state width="1914" height="271" key="GridCell.Tab.0.center" timestamp="1582474133824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291935806" />
-    <state width="1899" height="266" key="GridCell.Tab.0.left" timestamp="1581291935806">
+    <state width="1914" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582474133824" />
+    <state width="1914" height="271" key="GridCell.Tab.0.left" timestamp="1582474133824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291935806" />
-    <state width="1899" height="266" key="GridCell.Tab.0.right" timestamp="1581291935806">
+    <state width="1914" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582474133824" />
+    <state width="1914" height="271" key="GridCell.Tab.0.right" timestamp="1582474133824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291935806" />
+    <state width="1914" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582474133824" />
     <state width="670" height="328" key="GridCell.Tab.1.bottom" timestamp="1581172089808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -130,9 +129,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="478" y="174" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291846924" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1581288261029">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1582464947345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581288261029" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582464947345" />
   </component>
 </project>
