@@ -1,5 +1,6 @@
 import pygame
 import sys
+import math
 from settings import *
 from player_class import *
 from enemy_class import *
@@ -144,6 +145,16 @@ class App:
 
     def draw_coins(self):
         for coin in self.coins:
-            pygame.draw.circle(self.screen, WHITE, (int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER
+            #pygame.draw.rect(self.background, WHITE,  (int(coin.x * self.cell_width), int(coin.y * self.cell_height),
+                                                       #self.cell_width, self.cell_height))
+            if int(abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y)) <10:
+                self.draw_text('{}'.format(int (abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y))),
+                           self.screen, [int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER
                                                   // 2, int(coin.y * self.cell_height) + self.cell_height//2 +
-                                                  TOP_BOTTOM_BUFFER//2), 5)
+                                                  TOP_BOTTOM_BUFFER//2], 9,WHITE, START_FONT)
+            #print(coin.x - self.player.grid_pos.x, coin.y - self.player.grid_pos.y)
+            #if coin.x - (self.player.grid_pos.x, coin.y - self.player.grid_pos.y)
+
+            #pygame.draw.circle(self.screen, WHITE, (int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER
+             #                                     // 2, int(coin.y * self.cell_height) + self.cell_height//2 +
+              #                                    TOP_BOTTOM_BUFFER//2), 5)
