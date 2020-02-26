@@ -1,5 +1,3 @@
-from pygame.math import Vector2 as vec
-
 # SCREEN SETTINGS
 WIDTH, HEIGHT = 610, 670
 FPS = 60
@@ -18,4 +16,4 @@ START_TEXT_SIZE = 16
 START_FONT = 'arial black'
 
 # PLAYER SETTINGS
-PLAYER_START_POS = vec(13, 17)
+#PLAYER_START_POS = 0
