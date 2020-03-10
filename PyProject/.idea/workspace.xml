@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb79d9c9-2856-475d-830a-61d30dec62c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/enemy_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/walls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enemy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/enemy_class.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,18 +48,6 @@
       <recent name="C:\Users\Lucypoo\Documents\PyProject" />
       <recent name="C:\Users\Lucypoo\Documents\Pygame" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Python3.8" type="PythonConfigurationType" factoryName="Python">
@@ -110,7 +95,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -133,52 +120,49 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="757" y="287" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291792439" />
-    <state width="1877" height="271" key="GridCell.Tab.0.bottom" timestamp="1582680382321">
+    <state width="1899" height="347" key="GridCell.Tab.0.bottom" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582680382321" />
-    <state width="1877" height="271" key="GridCell.Tab.0.center" timestamp="1582680382321">
+    <state width="1899" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.0.center" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582680382321" />
-    <state width="1877" height="271" key="GridCell.Tab.0.left" timestamp="1582680382321">
+    <state width="1899" height="347" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.0.left" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582680382321" />
-    <state width="1877" height="271" key="GridCell.Tab.0.right" timestamp="1582680382321">
+    <state width="1899" height="347" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.0.right" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582680382321" />
-    <state width="670" height="328" key="GridCell.Tab.1.bottom" timestamp="1581172089808">
+    <state width="1899" height="347" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.1.bottom" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="670" height="328" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581172089808" />
-    <state width="670" height="328" key="GridCell.Tab.1.center" timestamp="1581172089808">
+    <state width="1899" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.1.center" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="670" height="328" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581172089808" />
-    <state width="670" height="328" key="GridCell.Tab.1.left" timestamp="1581172089808">
+    <state width="1899" height="347" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.1.left" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="670" height="328" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581172089808" />
-    <state width="670" height="328" key="GridCell.Tab.1.right" timestamp="1581172089808">
+    <state width="1899" height="347" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state width="1899" height="347" key="GridCell.Tab.1.right" timestamp="1583883896893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="670" height="328" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581172089808" />
-    <state x="478" y="174" key="SettingsEditor" timestamp="1581291846924">
+    <state width="1899" height="347" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583883896893" />
+    <state x="478" y="174" key="SettingsEditor" timestamp="1583843716011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="478" y="174" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1581291846924" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1582645344641">
+    <state x="478" y="174" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583843716011" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1583843604502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582645344641" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583843604502" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582648675004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582648675004" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PyProject$Python3_8.coverage" NAME="Python3.8 Coverage Results" MODIFIED="1582717685629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
