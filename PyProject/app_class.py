@@ -4,9 +4,13 @@ import math
 from settings import *
 from player_class import *
 from enemy_class import *
+from openpyxl import Workbook
+from random import *
 
 pygame.init()
 vec = pygame.math.Vector2
+
+
 
 
 class App:
@@ -25,6 +29,13 @@ class App:
         self.load()
         self.player = Player(self, self.p_pos)
         self.make_enemies()
+        # Make a data set & column titles
+        self.wb = Workbook()
+        self.ws = self.wb.active
+        self.cell_row = 1
+        self.ws.cell(row=self.cell_row, column=1, value="PLAYER POS X")
+        self.ws.cell(row=self.cell_row, column=2, value="PLAYER POS Y")
+        self.ws.cell(row=self.cell_row, column=3, value="PLAYER SCORE")
 
     def run(self):
         while self.running:
@@ -88,6 +99,22 @@ class App:
          #   pygame.draw.rect(self.background, (167, 179, 34), (coin.x * self.cell_width, coin.y * self.cell_height,
           #                                                     self.cell_width, self.cell_height))
 
+    def draw_influence_map(self):
+        pass
+        # Draw influence map
+        #if self.coins.index() self.player.grid_pos.x + 5 and self.player.grid_pos.x - 5 and self.player.grid_pos.y + 5 and self.player.grid_pos.y - 5:
+            #self.draw_text('{#}', self.screen, [self.cell_width // 2 + TOP_BOTTOM_BUFFER
+                                  #// 2, self.cell_height // 2 +
+                                  #TOP_BOTTOM_BUFFER // 2], 9, RED, START_FONT)
+        #for coin in self.coins:
+            #if (self.player.grid_pos.x + 5) >= coin.x >= (self.player.grid_pos.x - 5) and (
+                    #self.player.grid_pos.y + 5) >= coin.y >= (self.player.grid_pos.y - 5):
+                #self.draw_text(
+                    #'{}'.format(int(abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y))),
+                    #self.screen, [int(coin.x * self.cell_width) + self.cell_width // 2 + TOP_BOTTOM_BUFFER
+                                  #// 2, int(coin.y * self.cell_height) + self.cell_height // 2 +
+                                  #TOP_BOTTOM_BUFFER // 2], 9, RED, START_FONT)
+
 ################################################### INTRO FUNCTIONS ####################################################
 
     def start_events(self):
@@ -135,6 +162,7 @@ class App:
         self.screen.blit(self.background, (TOP_BOTTOM_BUFFER//2, TOP_BOTTOM_BUFFER//2))
         self.draw_coins()
         # self.draw_grid()
+        self.draw_influence_map()
         self.draw_text('CURRENT SCORE: {}'.format(self.player.current_score), self.screen, [60, 0], 18, WHITE,
                        START_FONT)
         self.draw_text('HIGH SCORE: 0', self.screen, [WIDTH//2+60, 0], 18, WHITE, START_FONT)
@@ -145,15 +173,6 @@ class App:
 
     def draw_coins(self):
         for coin in self.coins:
-            # Draw value map
-            #if int(abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y)) <10:
-                #self.draw_text('{}'.format(int (abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y))),
-                           #self.screen, [int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER
-                                                  #// 2, int(coin.y * self.cell_height) + self.cell_height//2 +
-                                                  #TOP_BOTTOM_BUFFER//2], 9,WHITE, START_FONT)
-            #print(coin.x - self.player.grid_pos.x, coin.y - self.player.grid_pos.y)
-            #if coin.x - (self.player.grid_pos.x, coin.y - self.player.grid_pos.y)
-
             pygame.draw.circle(self.screen, WHITE, (int(coin.x * self.cell_width) + self.cell_width//2 + TOP_BOTTOM_BUFFER
                                                   // 2, int(coin.y * self.cell_height) + self.cell_height//2 +
                                                   TOP_BOTTOM_BUFFER//2), 5)

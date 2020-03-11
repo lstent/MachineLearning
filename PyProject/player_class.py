@@ -3,6 +3,7 @@ from settings import *
 vec = pygame.math.Vector2
 
 
+
 class Player:
     def __init__(self, app, pos):
         self.app = app
@@ -13,10 +14,18 @@ class Player:
         self.able_to_move = True
         self.current_score = 0
         self.speed = 2
+        self.cell_row = 1
 
     def update(self):
         if self.able_to_move:
             self.pix_pos += self.direction * self.speed
+            # the output values will be an array of player positions
+            self.app.ws.cell(row=self.cell_row + 1, column=1, value=self.pix_pos.x)
+            self.app.ws.cell(row=self.cell_row + 1, column=2, value=self.pix_pos.y)
+            self.app.ws.cell(row=self.cell_row + 1, column=3, value=self.current_score)
+            self.cell_row = self.cell_row + 1
+        self.app.wb.save('pacman.xlsx')
+
         if self.time_to_move():
             if self.stored_direction != None:
                 self.direction = self.stored_direction
