@@ -4,13 +4,11 @@ import math
 from settings import *
 from player_class import *
 from enemy_class import *
+from grid_class import *
 from openpyxl import Workbook
 from random import *
-
 pygame.init()
 vec = pygame.math.Vector2
-
-
 
 
 class App:
@@ -18,32 +16,33 @@ class App:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
         self.running = True
-        self.state = 'start'
-        self.cell_width = MAZE_WIDTH // 28
-        self.cell_height = MAZE_HEIGHT // 30
+        self.state = 'playing'
+        self.cell_width = MAZE_WIDTH // COLS
+        self.cell_height = MAZE_HEIGHT // ROWS
         self.walls = []
         self.coins = []
         self.enemies = []
+        self.grid_tiles = []
         self.e_pos = []
+        self.g_pos = []
         self.p_pos = None
         self.load()
         self.player = Player(self, self.p_pos)
         self.make_enemies()
+        self.make_grid()
+        self.value = int()
+
         # Make a data set & column titles
         self.wb = Workbook()
         self.ws = self.wb.active
         self.cell_row = 1
-        self.ws.cell(row=self.cell_row, column=1, value="PLAYER POS X")
-        self.ws.cell(row=self.cell_row, column=2, value="PLAYER POS Y")
-        self.ws.cell(row=self.cell_row, column=3, value="PLAYER SCORE")
+        self.ws.cell(row=self.cell_row, column=1, value="GRID VALUES")
+        self.ws.cell(row=self.cell_row, column=26, value="PLAYER DIRECTION")
+        self.ws.cell(row=self.cell_row, column=27, value="PLAYER SCORE")
 
     def run(self):
         while self.running:
-            if self.state == 'start':
-                self.start_events()
-                self.start_update()
-                self.start_draw()
-            elif self.state == 'playing':
+            if self.state == 'playing':
                 self.playing_events()
                 self.playing_update()
                 self.playing_draw()
@@ -78,6 +77,7 @@ class App:
                         self.walls.append(vec(xidx, yidx))
                     elif char == "C":
                         self.coins.append(vec(xidx, yidx))
+                        self.g_pos.append(vec(xidx, yidx))
                     elif char == "P":
                         self.p_pos = vec(xidx, yidx)
                     elif char in ["2", "3", "4", "5"]:
@@ -90,30 +90,17 @@ class App:
         for idx, pos in enumerate(self.e_pos):
             self.enemies.append(Enemy(self, pos, idx))
 
+    def make_grid(self):
+        for idx, pos in enumerate(self.g_pos):
+            self.grid_tiles.append(Grid(self, pos, idx))
+
     def draw_grid(self):
         for x in range(WIDTH // self.cell_width):
             pygame.draw.line(self.background, GREY, (x * self.cell_width, 0), (x * self.cell_width, HEIGHT))
         for x in range(HEIGHT // self.cell_height):
             pygame.draw.line(self.background, GREY, (0, x * self.cell_height), (WIDTH, x * self.cell_height))
-        #for coin in self.coins:
-         #   pygame.draw.rect(self.background, (167, 179, 34), (coin.x * self.cell_width, coin.y * self.cell_height,
-          #                                                     self.cell_width, self.cell_height))
 
-    def draw_influence_map(self):
-        pass
-        # Draw influence map
-        #if self.coins.index() self.player.grid_pos.x + 5 and self.player.grid_pos.x - 5 and self.player.grid_pos.y + 5 and self.player.grid_pos.y - 5:
-            #self.draw_text('{#}', self.screen, [self.cell_width // 2 + TOP_BOTTOM_BUFFER
-                                  #// 2, self.cell_height // 2 +
-                                  #TOP_BOTTOM_BUFFER // 2], 9, RED, START_FONT)
-        #for coin in self.coins:
-            #if (self.player.grid_pos.x + 5) >= coin.x >= (self.player.grid_pos.x - 5) and (
-                    #self.player.grid_pos.y + 5) >= coin.y >= (self.player.grid_pos.y - 5):
-                #self.draw_text(
-                    #'{}'.format(int(abs(coin.x - self.player.grid_pos.x) + abs(coin.y - self.player.grid_pos.y))),
-                    #self.screen, [int(coin.x * self.cell_width) + self.cell_width // 2 + TOP_BOTTOM_BUFFER
-                                  #// 2, int(coin.y * self.cell_height) + self.cell_height // 2 +
-                                  #TOP_BOTTOM_BUFFER // 2], 9, RED, START_FONT)
+
 
 ################################################### INTRO FUNCTIONS ####################################################
 
@@ -121,8 +108,6 @@ class App:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                self.state = 'playing'
 
     def start_update(self):
         pass
@@ -142,33 +127,27 @@ class App:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    self.player.move(vec(-1, 0))
-                if event.key == pygame.K_RIGHT:
-                    self.player.move(vec(1, 0))
-                if event.key == pygame.K_UP:
-                    self.player.move(vec(0, -1))
-                if event.key == pygame.K_DOWN:
-                    self.player.move(vec(0, 1))
 
     def playing_update(self):
         self.player.update()
         for enemy in self.enemies:
             enemy.update()
+        for tiles in self.grid_tiles:
+            tiles.update()
 
     def playing_draw(self):
         self.screen.fill(BLACK)
         self.screen.blit(self.background, (TOP_BOTTOM_BUFFER//2, TOP_BOTTOM_BUFFER//2))
         self.draw_coins()
         # self.draw_grid()
-        self.draw_influence_map()
         self.draw_text('CURRENT SCORE: {}'.format(self.player.current_score), self.screen, [60, 0], 18, WHITE,
                        START_FONT)
         self.draw_text('HIGH SCORE: 0', self.screen, [WIDTH//2+60, 0], 18, WHITE, START_FONT)
         self.player.draw()
         for enemy in self.enemies:
             enemy.draw()
+        for tiles in self.grid_tiles:
+            tiles.draw()
         pygame.display.update()
 
     def draw_coins(self):
